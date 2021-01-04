@@ -58,58 +58,22 @@ def window_to_next_group(qtile):
 
 keys = [
     # SUPER + FUNCTION KEYS
-
-    Key([mod], "e", lazy.spawn('code')),
     Key([mod], "c", lazy.spawn('conky-toggle')),
     Key([mod], "w", lazy.spawn('firefox')),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
-    Key([mod], "d", lazy.spawn('rofi -show run')),
     Key([mod], "q", lazy.window.kill()),
     Key([mod], "r", lazy.spawn('rofi-theme-selector')),
-    Key([mod], "v", lazy.spawn('pavucontrol')),
     Key([mod], "x", lazy.spawn('arcolinux-logout')),
+    Key([mod], "space", lazy.spawn('rofi -show run')),
     Key([mod], "Escape", lazy.spawn('xkill')),
     Key([mod], "Return", lazy.spawn('termite')),
-    Key([mod], "KP_Enter", lazy.spawn('termite')),
-    Key([mod], "F8", lazy.spawn('thunar')),
 
     # SUPER + SHIFT KEYS
-
     Key([mod, "shift"], "Return", lazy.spawn('thunar')),
-    Key([mod, "shift"], "d", lazy.spawn('rofi -show drun')),
+    Key([mod, "shift"], "space", lazy.spawn('rofi -show drun')),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "control"], "r", lazy.restart()),
-    # Key([mod, "shift"], "x", lazy.shutdown()),
-
-    # CONTROL + ALT KEYS
-
-    Key(["mod1", "control"], "Next", lazy.spawn('conky-rotate -n')),
-    Key(["mod1", "control"], "Prior", lazy.spawn('conky-rotate -p')),
-    Key(["mod1", "control"], "a", lazy.spawn('xfce4-appfinder')),
-    Key(["mod1", "control"], "b", lazy.spawn('thunar')),
-    Key(["mod1", "control"], "c", lazy.spawn('catfish')),
-    Key(["mod1", "control"], "e", lazy.spawn('arcolinux-tweak-tool')),
-    Key(["mod1", "control"], "f", lazy.spawn('firefox')),
-    Key(["mod1", "control"], "g", lazy.spawn(
-        'chromium -no-default-browser-check')),
-    Key(["mod1", "control"], "i", lazy.spawn('nitrogen')),
-    Key(["mod1", "control"], "k", lazy.spawn('arcolinux-logout')),
-    Key(["mod1", "control"], "l", lazy.spawn('arcolinux-logout')),
-    Key(["mod1", "control"], "m", lazy.spawn('xfce4-settings-manager')),
-    Key(["mod1", "control"], "o", lazy.spawn(
-        home + '/.config/qtile/scripts/picom-toggle.sh')),
-    Key(["mod1", "control"], "p", lazy.spawn('pamac-manager')),
-    Key(["mod1", "control"], "r", lazy.spawn('rofi-theme-selector')),
-    Key(["mod1", "control"], "s", lazy.spawn('spotify')),
-    Key(["mod1", "control"], "t", lazy.spawn('termite')),
-    Key(["mod1", "control"], "u", lazy.spawn('pavucontrol')),
-    Key(["mod1", "control"], "w", lazy.spawn('arcolinux-welcome-app')),
-    Key(["mod1", "control"], "Return", lazy.spawn('termite')),
-
-    # ALT + ... KEYS
-    Key(["mod1"], "F2", lazy.spawn('gmrun')),
-    Key(["mod1"], "F3", lazy.spawn('xfce4-appfinder')),
 
     # VARIETY KEYS
     Key(["mod1", "shift"], "4", lazy.spawn('xfce4-screenshooter')),
@@ -134,7 +98,7 @@ keys = [
     #    Key([], "XF86AudioStop", lazy.spawn("mpc stop")),
 
     # QTILE LAYOUT KEYS
-    Key([mod], "space", lazy.next_layout()),
+    Key([mod], "n", lazy.next_layout()),
 
     # CHANGE FOCUS
     Key([mod], "Up", lazy.layout.up()),
@@ -171,7 +135,7 @@ keys = [
     Key([mod, "shift"], "Down", lazy.layout.shuffle_down()),
     Key([mod, "shift"], "Left", lazy.layout.swap_left()),
     Key([mod, "shift"], "Right", lazy.layout.swap_right()),
-    Key([mod, "shift"], "space", lazy.window.toggle_floating()), ]
+    Key([mod, "shift"], "f", lazy.window.toggle_floating()), ]
 
 groups = []
 
@@ -192,16 +156,11 @@ for i in range(len(group_names)):
 
 for i in groups:
     keys.extend([
-
         # CHANGE WORKSPACES
         Key([mod], i.name, lazy.group[i.name].toscreen()),
         Key([mod], "Tab", lazy.screen.next_group()),
         Key(["mod1"], "Tab", lazy.screen.next_group()),
         Key(["mod1", "shift"], "Tab", lazy.screen.prev_group()),
-
-        # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND STAY ON WORKSPACE
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
-        # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND FOLLOW MOVED WINDOW TO WORKSPACE
         Key([mod, "shift"], i.name, lazy.window.togroup(
             i.name), lazy.group[i.name].toscreen()),
     ])
