@@ -91,12 +91,14 @@ keys = [
     Key(["mod1", "control"], "c", lazy.spawn('catfish')),
     Key(["mod1", "control"], "e", lazy.spawn('arcolinux-tweak-tool')),
     Key(["mod1", "control"], "f", lazy.spawn('firefox')),
-    Key(["mod1", "control"], "g", lazy.spawn('chromium -no-default-browser-check')),
+    Key(["mod1", "control"], "g", lazy.spawn(
+        'chromium -no-default-browser-check')),
     Key(["mod1", "control"], "i", lazy.spawn('nitrogen')),
     Key(["mod1", "control"], "k", lazy.spawn('arcolinux-logout')),
     Key(["mod1", "control"], "l", lazy.spawn('arcolinux-logout')),
     Key(["mod1", "control"], "m", lazy.spawn('xfce4-settings-manager')),
-    Key(["mod1", "control"], "o", lazy.spawn(home + '/.config/qtile/scripts/picom-toggle.sh')),
+    Key(["mod1", "control"], "o", lazy.spawn(
+        home + '/.config/qtile/scripts/picom-toggle.sh')),
     Key(["mod1", "control"], "p", lazy.spawn('pamac-manager')),
     Key(["mod1", "control"], "r", lazy.spawn('rofi-theme-selector')),
     Key(["mod1", "control"], "s", lazy.spawn('spotify')),
@@ -200,7 +202,8 @@ for i in groups:
         # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND STAY ON WORKSPACE
         # Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
         # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND FOLLOW MOVED WINDOW TO WORKSPACE
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name), lazy.group[i.name].toscreen()),
+        Key([mod, "shift"], i.name, lazy.window.togroup(
+            i.name), lazy.group[i.name].toscreen()),
     ])
 
 
@@ -215,7 +218,8 @@ def init_layout_theme():
 layout_theme = init_layout_theme()
 
 layouts = [
-    layout.MonadTall(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
+    layout.MonadTall(margin=8, border_width=2,
+                     border_focus="#5e81ac", border_normal="#4c566a"),
     layout.Floating(**layout_theme),
 ]
 
@@ -255,12 +259,9 @@ widget_defaults = init_widgets_defaults()
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list_setup = [
-        widget.TextBox(
-            font="FontAwesome",
-            text="  ",
-            foreground=colors[7],
-            padding=0,
-            fontsize=16,
+        widget.Image(
+            filename=home + "/.config/qtile/icons/py.png",
+            margin=5,
         ),
         widget.Sep(
             linewidth=1,
@@ -421,8 +422,10 @@ screens = init_screens()
 
 # MOUSE CONFIGURATION
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size())
+    Drag([mod], "Button1", lazy.window.set_position_floating(),
+         start=lazy.window.get_position()),
+    Drag([mod], "Button3", lazy.window.set_size_floating(),
+         start=lazy.window.get_size())
 ]
 
 dgroups_key_binder = None
