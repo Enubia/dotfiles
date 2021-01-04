@@ -1,0 +1,95 @@
+[options]
+#https://github.com/thestinger/termite/blob/master/config
+allow_bold = true
+audible_bell = false
+browser = xdg-open
+clickable_url = true
+cursor_blink = system
+cursor_shape = block
+dynamic_title = true
+filter_unmatched_urls = true
+font = Fira Code Nerd Font Mono 11
+#font = Monospace 11
+#font = Hack Bold 10
+geometry = 900x650
+highlight = #2f2f2f
+icon_name = terminal
+modify_other_keys = false
+mouse_autohide = false
+scroll_on_output = false
+scroll_on_keystroke = true
+scrollback_lines = 15000
+size_hints = false
+search_wrap = true
+urgent_on_bell = true
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 10
+#roundness = 2.0
+
+############################################################
+#### You can change the color coding to your liking
+#### There is a folder themes in ~/config/termite/themes
+#### Copy/paste the colors from one of the 79+ templates to this one
+#### A backup of the original config termite is present
+############################################################
+#### Use websites to make the terminal your own
+#### https://terminal.sexy
+#### https://critical.ch/xterm/
+############################################################
+
+[colors]
+# Base16 Pop
+# Author: Chris Kempson (http://chriskempson.com)
+
+foreground      = #d0d0d0
+foreground_bold = #e0e0e0
+cursor          = #e0e0e0
+background = rgba(40, 42, 54, 0.8)
+
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #000000
+color8  = #505050
+color7  = #d0d0d0
+color15 = #ffffff
+
+# Red
+color1  = #eb008a
+color9  = #eb008a
+
+# Green
+color2  = #37b349
+color10 = #37b349
+
+# Yellow
+color3  = #f8ca12
+color11 = #f8ca12
+
+# Blue
+color4  = #0e5a94
+color12 = #0e5a94
+
+# Purple
+color5  = #b31e8d
+color13 = #b31e8d
+
+# Teal
+color6  = #00aabb
+color14 = #00aabb
+
+# Extra colors
+color16 = #f29333
+color17 = #7a2d00
+color18 = #202020
+color19 = #303030
+color20 = #b0b0b0
+color21 = #e0e0e0
