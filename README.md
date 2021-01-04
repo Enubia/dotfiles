@@ -1,4 +1,8 @@
-required fonts
+![Example](example.png)
+
+### required fonts
 https://aur.archlinux.org/packages/ttf-ancient-fonts/
+
 https://aur.archlinux.org/packages/nerd-fonts-fira-code/
-noto-fonts-emoji
+
+https://archlinux.org/packages/extra/any/noto-fonts-emoji/
