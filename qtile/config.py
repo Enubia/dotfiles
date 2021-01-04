@@ -262,17 +262,26 @@ def init_widgets_list():
             fontsize=12,
             foreground=colors[5],
         ),
-        widget.Sep(
-            linewidth=1,
-            padding=10,
-            foreground=colors[2]
-        ),
-        arcobattery.BatteryIcon(
+        widget.TextBox(
+            font="FontAwesome",
+            text="  ",
+            foreground=colors[3],
             padding=0,
-            scale=0.7,
-            y_poss=2,
-            theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
-            update_interval=5,
+            fontsize=16
+        ),
+        widget.NetGraph(
+            font="Noto Sans",
+            fontsize=12,
+            bandwidth="down",
+            interface="auto",
+            fill_color=colors[3],
+            foreground=colors[2],
+            background=colors[1],
+            graph_color=colors[3],
+            border_color=colors[2],
+            padding=0,
+            border_width=1,
+            line_width=1,
         ),
         widget.Sep(
             linewidth=1,
@@ -339,6 +348,18 @@ def init_widgets_list():
             foreground=colors[5],
             fontsize=12,
             format="%d-%m-%Y %H:%M"
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10,
+            foreground=colors[2]
+        ),
+        arcobattery.BatteryIcon(
+            padding=0,
+            scale=0.7,
+            y_poss=2,
+            theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
+            update_interval=5,
         ),
         widget.Sep(
             linewidth=1,
