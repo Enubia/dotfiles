@@ -177,8 +177,7 @@ def init_layout_theme():
 layout_theme = init_layout_theme()
 
 layouts = [
-    layout.MonadTall(margin=8, border_width=2,
-                     border_focus="#5e81ac", border_normal="#4c566a"),
+    layout.MonadTall(**layout_theme),
     layout.Floating(**layout_theme),
 ]
 
