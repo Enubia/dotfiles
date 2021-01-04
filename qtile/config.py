@@ -287,7 +287,7 @@ def init_widgets_list():
         ),
         widget.Image(
             filename=home + "/.config/qtile/icons/cpu.png",
-            margin=3,
+            margin=2,
         ),
         widget.ThermalSensor(
             tag_sensor="Package id 0",
