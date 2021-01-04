@@ -262,12 +262,9 @@ def init_widgets_list():
             fontsize=12,
             foreground=colors[5],
         ),
-        widget.TextBox(
-            font="FontAwesome",
-            text="  ",
-            foreground=colors[3],
-            padding=0,
-            fontsize=16
+        widget.Image(
+            filename=home + "/.config/qtile/icons/download.png",
+            margin=3,
         ),
         widget.NetGraph(
             font="Noto Sans",
@@ -288,12 +285,9 @@ def init_widgets_list():
             padding=10,
             foreground=colors[2]
         ),
-        widget.TextBox(
-            font="FontAwesome",
-            text="  ",
-            foreground=colors[6],
-            padding=0,
-            fontsize=16
+        widget.Image(
+            filename=home + "/.config/qtile/icons/cpu.png",
+            margin=3,
         ),
         widget.ThermalSensor(
             tag_sensor="Package id 0",
@@ -318,12 +312,9 @@ def init_widgets_list():
             padding=10,
             foreground=colors[2]
         ),
-        widget.TextBox(
-            font="FontAwesome",
-            text="  ",
-            foreground=colors[4],
-            padding=0,
-            fontsize=16
+        widget.Image(
+            filename=home + "/.config/qtile/icons/ram.png",
+            margin=0,
         ),
         widget.Memory(
             font="Noto Sans",
@@ -337,12 +328,9 @@ def init_widgets_list():
             padding=10,
             foreground=colors[2]
         ),
-        widget.TextBox(
-            font="FontAwesome",
-            text="  ",
-            foreground=colors[3],
-            padding=0,
-            fontsize=16
+        widget.Image(
+            filename=home + "/.config/qtile/icons/calendar.png",
+            margin=3,
         ),
         widget.Clock(
             foreground=colors[5],
