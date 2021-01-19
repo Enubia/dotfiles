@@ -67,6 +67,8 @@ keys = [
     Key([mod], "space", lazy.spawn('rofi -show run')),
     Key([mod], "Escape", lazy.spawn('xkill')),
     Key([mod], "Return", lazy.spawn('termite')),
+    Key([mod], "KP_Enter", lazy.spawn('termite')),
+
 
     # SUPER + SHIFT KEYS
     Key([mod, "shift"], "Return", lazy.spawn('thunar')),
