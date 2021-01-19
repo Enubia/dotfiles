@@ -21,7 +21,7 @@ function run {
 #setxkbmap -layout be
 
 #autostart ArcoLinux Welcome App
-run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
+# run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
 
 #Some ways to set your wallpaper besides variety or nitrogen
 # --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &

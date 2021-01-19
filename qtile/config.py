@@ -214,12 +214,21 @@ def init_widgets_defaults():
 widget_defaults = init_widgets_defaults()
 
 
+def open_thunar(qtile):
+    qtile.cmd_spawn('thunar')
+
+
+def open_htop(qtile):
+    qtile.cmd_spawn('termite -e htop')
+
+
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list_setup = [
         widget.Image(
             filename=home + "/.config/qtile/icons/py.png",
             margin=5,
+            mouse_callbacks={'Button1': open_thunar}
         ),
         widget.Sep(
             linewidth=1,
@@ -304,7 +313,8 @@ def init_widgets_list():
             border_width=1,
             line_width=1,
             core="all",
-            type="box"
+            type="box",
+            mouse_callbacks={'Button1': open_htop}
         ),
         widget.Sep(
             linewidth=1,
@@ -321,6 +331,7 @@ def init_widgets_list():
             update_interval=1,
             fontsize=12,
             foreground=colors[5],
+            mouse_callbacks={'Button1': open_htop}
         ),
         widget.Sep(
             linewidth=1,
