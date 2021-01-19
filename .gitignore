@@ -1,7 +1,19 @@
+arcolinux-logo
 arcolinux-tweak-tool
 arcolinux-welcome-app
 arcologout
 autostart
+catfish
+gpick
+gtk-2.0
+i3
+obmenu-generator
+**/__pycache__
+picom.conf
+openbox
+plank
+polybar
+tint2
 cef_user_data
 chromium
 Code
@@ -14,6 +26,7 @@ discord
 Electron
 filezilla
 galculator
+geany
 gconf
 gtk-3.0
 htop
