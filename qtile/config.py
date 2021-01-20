@@ -64,15 +64,15 @@ keys = [
     Key([mod], "q", lazy.window.kill()),
     Key([mod], "r", lazy.spawn('rofi-theme-selector')),
     Key([mod], "x", lazy.spawn('arcolinux-logout')),
-    Key([mod], "space", lazy.spawn('rofi -show run')),
+    Key([mod], "d", lazy.spawn('rofi -show run')),
     Key([mod], "Escape", lazy.spawn('xkill')),
     Key([mod], "Return", lazy.spawn('termite')),
     Key([mod], "KP_Enter", lazy.spawn('termite')),
 
 
     # SUPER + SHIFT KEYS
-    Key([mod, "shift"], "Return", lazy.spawn('thunar')),
-    Key([mod, "shift"], "space", lazy.spawn('rofi -show drun')),
+    Key([mod, "shift"], "KP_Enter", lazy.spawn('thunar')),
+    Key([mod, "shift"], "d", lazy.spawn('rofi -show drun')),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "control"], "r", lazy.restart()),
@@ -393,8 +393,8 @@ widgets_screen2 = init_widgets_screen2()
 
 def init_screens():
     return [
-        Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26)),
-        Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26))
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26, opacity=0.5)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26, opacity=0.5))
     ]
 
 
@@ -461,7 +461,6 @@ floating_layout = layout.Floating(float_rules=[
     {'wname': 'Open File'},
     {'wname': 'pinentry'},
     {'wmclass': 'ssh-askpass'},
-    {'wmclass': 'JetBrains Toolbox'},
 
 ], fullscreen_border_width=0, border_width=0)
 auto_fullscreen = True
