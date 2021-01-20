@@ -171,8 +171,8 @@ for i in groups:
 def init_layout_theme():
     return {"margin": 5,
             "border_width": 2,
-            "border_focus": "#5e81ac",
-            "border_normal": "#4c566a"
+            "border_focus": "#286c9a",
+            "border_normal": "#090809"
             }
 
 
@@ -187,15 +187,15 @@ layouts = [
 # COLORS FOR THE BAR
 
 def init_colors():
-    return [["#2F343F", "#2F343F"],  # color 0
-            ["#2F343F", "#2F343F"],  # color 1
+    return [["#090809", "#090809"],  # color 0
+            ["#090809", "#090809"],  # color 1
             ["#c0c5ce", "#c0c5ce"],  # color 2
-            ["#fba922", "#fba922"],  # color 3
+            ["#b88a3b", "#b88a3b"],  # color 3
             ["#3384d0", "#3384d0"],  # color 4
             ["#f3f4f5", "#f3f4f5"],  # color 5
-            ["#cd1f3f", "#cd1f3f"],  # color 6
-            ["#62FF00", "#62FF00"],  # color 7
-            ["#6790eb", "#6790eb"],  # color 8
+            ["#783331", "#783331"],  # color 6
+            ["#37b7a5", "#37b7a5"],  # color 7
+            ["#286c9a", "#286c9a"],  # color 8
             ["#a9a9a9", "#a9a9a9"]]  # color 9
 
 
@@ -394,8 +394,8 @@ widgets_screen2 = init_widgets_screen2()
 
 def init_screens():
     return [
-        Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26, opacity=0.5)),
-        Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26, opacity=0.5))
+        Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26, opacity=0.8)),
+        Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26, opacity=0.8))
     ]
 
 
