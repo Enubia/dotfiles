@@ -33,7 +33,7 @@ function run {
 #run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
 
 #starting utility applications at boot time
-run variety &
+# run variety &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
@@ -46,7 +46,7 @@ picom --config $HOME/.config/qtile/scripts/picom.conf &
 #starting user applications at boot time
 run volumeicon &
 #run discord &
-#nitrogen --restore &
+nitrogen --restore &
 #run caffeine -a &
 #run vivaldi-stable &
 #run firefox &
