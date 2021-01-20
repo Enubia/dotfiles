@@ -148,7 +148,7 @@ class Battery(_Battery):
          ),
         ('error_message', 'Error', 'Error message if something is wrong'),
         ('format',
-         '{char} {percent:2.0%} {hour:d}:{min:02d}',
+         '{percent:2.0%} {hour:d}:{min:02d}',
          'Display format'
          ),
         ('hide_threshold', None, 'Hide the text when there is enough energy'),

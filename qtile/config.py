@@ -361,6 +361,7 @@ def init_widgets_list():
             theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
             update_interval=5,
         ),
+        arcobattery.Battery(),
         widget.Sep(
             linewidth=1,
             padding=10,
