@@ -310,8 +310,8 @@ def init_widgets_list():
         ),
         widget.CPUGraph(
             border_color=colors[2],
-            fill_color=colors[8],
-            graph_color=colors[8],
+            fill_color=colors[7],
+            graph_color=colors[7],
             border_width=1,
             line_width=1,
             core="all",
@@ -329,7 +329,7 @@ def init_widgets_list():
         ),
         widget.Memory(
             font="Noto Sans",
-            format='{MemUsed}M/{MemTotal}M',
+            format='{MemUsed} / {MemTotal}',
             update_interval=1,
             fontsize=12,
             foreground=colors[5],
@@ -347,7 +347,7 @@ def init_widgets_list():
         widget.Clock(
             foreground=colors[5],
             fontsize=12,
-            format="%d-%m-%Y %H:%M"
+            format="%H:%M:%S %d-%m-%Y"
         ),
         widget.Sep(
             linewidth=1,
